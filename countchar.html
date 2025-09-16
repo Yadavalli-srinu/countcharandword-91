@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="countchar.css">
+</head>
+<body>
+    <div class="bg">
+        <div class="bg1">
+           <h1>Count of Characters and Words</h1> 
+           <input type="text" placeholder="Enter text"  id="input" >
+           <button onclick="btn()" >Click</button>
+             <div class="bg2">
+                <p id="text1"></p>
+                <p id="text2"></p>
+             </div>
+           
+        </div>
+    </div>
+<script>
+    let text1=document.getElementById("text1")
+    let text2=document.getElementById("text2")
+    
+    function btn(){
+        let input=document.getElementById("input").value.trim();
+        text1.textContent="Number of characters"+" "+input.length+" "+" "+"And";
+        let word=input.split(" ")
+        text2.textContent="Number of words"+" "+word.length;
+    }
+</script>
+</body>
+</html>
